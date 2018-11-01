@@ -22,10 +22,13 @@ def predict():
     # ensure an image was properly uploaded to our endpoint
     if flask.request.method == "POST":    
 
+        content = flask.request.get_json()
+        print(content)
+
         # Test data
         input = [[2, 3, 45, 220, 32, 1, 3, 32, 2]]
         prediction = model.predict(input)
-        data["prediction"] = {"bug": int(prediction[1:1])}
+        data["prediction"] = {"bug": bool(prediction[0])}
         
         # indicate that the request was a success
         data["success"] = True
@@ -67,14 +70,13 @@ def train_model():
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
     # Build the model
-    lm = DecisionTreeClassifier() 
+    global model
+    lm = DecisionTreeClassifier()
     model = lm.fit(X_train, y_train)
 
 # If this is the main thread of execution first load the model and then start the server
 if __name__ == "__main__":
-    print(("* Loading SKLearn model and Flask starting server..."
-        "please wait until server has fully started"))
+    print(("* Loading SKLearn model and Flask starting server...please wait until server has fully started"))
     train_model()
     Debug(app)
     app.run(debug=True)
-    #app.run(host='0.0.0.0')
