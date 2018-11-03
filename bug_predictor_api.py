@@ -78,7 +78,7 @@ def train_model():
     X = bug_predictor_sample_dataset[['no_of_commits', 'no_of_files', 'lines_of_code', 'day_of_year', 'week_of_year', 'day_of_week', 'quarter', 'week', 'requesting_user_cat']].copy()
     y = bug_predictor_sample_dataset[['bug_raised_in_uat']].copy()
 
-    # Train/test/split
+    # Train/test split
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
     # Build the model

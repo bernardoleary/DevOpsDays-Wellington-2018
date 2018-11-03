@@ -12,14 +12,16 @@ There will be some maths content, but it will be relatively light and hopefully 
 
 People will need to have the following installed (all of this works on any platform - Windows/Linux/Mac):
 
-* Git version control software
+* Git: https://git-scm.com/
+* Postman (or equivalent): https://www.getpostman.com/
 * Jupyter Notebook: http://jupyter.org/install
-* Python (which is a prerequisite for Jupyter anyway)
+* Python (prerequisite for Jupyter): https://www.python.org/
 * Pip: https://pip.pypa.io/en/stable/installing/
 * Python libraries:
-    * sklearn: http://scikit-learn.org/stable/
-    * numpy: http://www.numpy.org/
-    * pandas: https://pandas.pydata.org/
-    * matplotlib: https://matplotlib.org/
+    * SKLearn: http://scikit-learn.org/stable/
+    * NumPy: http://www.numpy.org/
+    * Pandas: https://pandas.pydata.org/
+    * MatPlotLib: https://matplotlib.org/
+    * Flask: http://flask.pocoo.org/
 
 Will spend a few minutes at the start of the tutorial making sure that everyone has these setup correctly anyway.
