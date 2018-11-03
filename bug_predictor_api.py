@@ -22,12 +22,24 @@ def predict():
     # ensure an image was properly uploaded to our endpoint
     if flask.request.method == "POST":    
 
+        # Get input data out of JSON content
         content = flask.request.get_json()
-        print(content)
+        input = [[
+            content["no_of_commits"], 
+            content["no_of_files"], 
+            content["lines_of_code"], 
+            content["day_of_year"], 
+            content["week_of_year"], 
+            content["day_of_week"], 
+            content["quarter"], 
+            content["week"], 
+            content["requesting_user_cat"]
+        ]]
 
-        # Test data
-        input = [[2, 3, 45, 220, 32, 1, 3, 32, 2]]
+        # Run pedictor
         prediction = model.predict(input)
+
+        # Predictor output
         data["prediction"] = {"bug": bool(prediction[0])}
         
         # indicate that the request was a success
@@ -76,7 +88,6 @@ def train_model():
 
 # If this is the main thread of execution first load the model and then start the server
 if __name__ == "__main__":
-    print(("* Loading SKLearn model and Flask starting server...please wait until server has fully started"))
     train_model()
     Debug(app)
     app.run(debug=True)
