@@ -1,9 +1,7 @@
 import sys
 import flask
 from flask_debug import Debug
-import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 from sklearn import datasets
 from sklearn.linear_model import LinearRegression
 from sklearn.tree import DecisionTreeClassifier
