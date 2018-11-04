@@ -19,7 +19,7 @@ People will need to have the following installed (all of this works on any platf
 * Python (prerequisite for Jupyter): https://www.python.org/
 * Pip: https://pip.pypa.io/en/stable/installing/
 * Python libraries:
-    * SKLearn: http://scikit-learn.org/stable/
+    * Sci-Kit Learn: http://scikit-learn.org/stable/
         * $ pip install scikit-learn
     * Pandas: https://pandas.pydata.org/
         * $ pip install pandas
