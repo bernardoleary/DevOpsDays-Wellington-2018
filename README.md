@@ -19,9 +19,14 @@ People will need to have the following installed (all of this works on any platf
 * Pip: https://pip.pypa.io/en/stable/installing/
 * Python libraries:
     * SKLearn: http://scikit-learn.org/stable/
-    * NumPy: http://www.numpy.org/
+        * > pip install scikit-learn
     * Pandas: https://pandas.pydata.org/
-    * MatPlotLib: https://matplotlib.org/
+        * > pip install pandas
     * Flask: http://flask.pocoo.org/
+        * > pip install flask
+        * > pip install flask_debug
+    * Optional libraries:
+        * MatPlotLib: https://matplotlib.org/
+        * NumPy: http://www.numpy.org/        
 
 Will spend a few minutes at the start of the tutorial making sure that everyone has these setup correctly anyway.
